@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+}
+.panel {
+    height: 80vh;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex .7s ease-in;
+}
+.panel h3 {
+    text-align: center;
+    opacity: 0;
+}
+.panel.active {
+    flex: 5;
+}
+.panel.active h3 {
+    opacity: 1;
+}
+
+@media(max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    .panel:nth-of-type(4), .panel:nth-of-type(5) {
+        display: none;
+    }
+}
